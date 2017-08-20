@@ -1,0 +1,44 @@
+html {
+  background-color: #FFFFFF;
+  font-family: sans-serif;
+  color: black;
+  display: block;
+}
+
+body {
+  width: 80%;
+  margin: auto;
+  display: block;
+  align-items: center;
+  align-content: center;
+}
+
+.name {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.genrate-password {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#passwordOutput {
+  height: 70px;
+  width: 80%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2%;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.genratePasswordButton {
+  height: 80px;
+  width: 50%;
+  border-color: red;
+  border-radius: 10%;
+}
