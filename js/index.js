@@ -1,30 +1,19 @@
-// function  to create the random string 
-var genratePassword = function(length) {
+const {app,BrowserWindow} = require('electron');
 
-  var genratedPassword = "";
+let mainWindow;
 
-  var ALLOWED_CHARACTER_SETS = [
-    [true, "Numbers", "0123456789"],
-    [true, "Lowercase", "abcdefghijklmnopqrstuvwxyz"],
-    [false, "Uppercase", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"],
-    [false, "ASCII symbols", "!\"#$%" + String.fromCharCode(38) + "'()*+,-./:;" + String.fromCharCode(60) + "=>?@[\\]^_`{|}~"],
-    [false, "Space", " "],
-  ];
+app.on('ready', () => {
+	mainWindow = new BrowserWindow({
+		width: 500,
+		height: 600,
+		frame: false
+	});
 
-  for(i=0; i<length; i++) {
-    var rand_ACS = ALLOWED_CHARACTER_SETS[Math.floor(Math.random() * 3) + 1][2];
-    console.log(rand_ACS);
-    genratedPassword += rand_ACS.charAt(Math.floor(Math.random() * rand_ACS.length));
-  }
-
-  a = genratedPassword;
-  return a;
-}
-
-var onClick = function () {
-  var password = genratePassword(10);
-  console.log(password);
-  
-  document.getElementById('passwordOutput').innerHTML = password;
-}
- 
+	mainWindow.on('closed' , () => {
+	mainWindow = null;
+	});
+	let val = __dirname.toString();
+	val = val.slice(0,val.length-2);
+	console.log(val);
+	mainWindow.loadURL('file://'+val+'./index.html');
+});
