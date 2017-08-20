@@ -1,0 +1,19 @@
+{
+  "name": "password-genrator",
+  "version": "1.0.0",
+  "description": "add electron window",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engrravijain/Password-Genrator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/engrravijain/Password-Genrator/issues"
+  },
+  "homepage": "https://github.com/engrravijain/Password-Genrator#readme"
+}
